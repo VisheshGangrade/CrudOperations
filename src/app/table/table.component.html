@@ -1,0 +1,36 @@
+<p>table works!</p>
+<!-- <div class="col-md-6 ChildDiv" style="color: whitesmoke;"> -->
+    <h2 style="color: darkgoldenrod;">Table Component</h2>
+     <select class="p-20"> 
+      <option value="id" selected>Id</option>
+     <option value="name">Name</option>
+     <option value="class">Class</option>
+     <option value="age">Age</option>   
+     </select>       
+<div>
+
+<input type="search" [(ngModel)]="search_type"> 
+ <button type="button" class="btn btn-success"(click)="search()">Search</button> 
+
+</div>
+    <table class="table table-hover">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Age</th>
+      </tr>
+         <tr *ngFor="let person of persons;let i=index;">
+          <td>{{person.id}}</td>
+          <td>{{person.name}}</td>
+          <td>{{person.class}}</td>
+          <td>{{person.age}}</td>
+           <td><button (click)="delete(i)">Delete </button></td> 
+          <td> <button (click)="edit(person,i)">Edit</button></td>
+
+        </tr> 
+
+     </table>
+  
+  
+

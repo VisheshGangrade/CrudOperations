@@ -1,0 +1,19 @@
+<p>field works!</p>
+<!-- <div class="col-md-6 ChildDiv" style="color: whitesmoke;"> -->
+    <h2 style="color: aquamarine;">Field Component</h2>
+   <form [formGroup]= "personForm"> 
+        <div class="formGroup">
+            <label>Id</label>
+            <input type="number" formControlName="id">
+            <label>Name</label>
+            <input type="text" formControlName="name">
+            <label>Class</label>
+            <input type="text" formControlName="class">
+            <label>Age</label>
+            <input type="number" formControlName="age">
+            <div>
+                 <button type="button" class="btn btn-success" (click)="Submit()" *ngIf="isUpdate">Submit</button> 
+                  <button type="button" class="btn btn-primary"(click)="Update()" *ngIf="isUpdate">Update</button>  
+            </div>
+        </div>
+    </form>
